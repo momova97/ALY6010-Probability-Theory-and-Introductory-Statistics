@@ -1,3 +1,6 @@
+# Please visit [wiki page](../../wiki) of this repo
+
+
 # ALY6010-Probability-Theory-and-Introductory-Statistics
 
 Welcome to the ALY6010 Probability Theory and Introductory Statistics course repository. This repository documents my journey through a comprehensive course that has been instrumental in advancing my skills as a data analyst, combining a solid foundation in statistical theory with practical knowledge of data structures.
