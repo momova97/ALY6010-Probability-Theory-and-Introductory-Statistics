@@ -1,0 +1,40 @@
+print('Mohammad Hossein Movahedi')
+#install and load packages
+install.packages('FSA')
+install.packages('FSAdata')
+install.packages('magrittr')
+install.packages('dplyr')
+install.packages('tidyr')
+install.packages('plyr')
+install.packages('tidyverse')
+install.packages('outliers')
+install.packages('ggplot2')
+install.packages('lubridate')
+install.packages('corrplot')
+
+library(ggplot2)
+library(outliers)
+library(FSA)
+library(FSAdata)
+library(magrittr)
+library(dplyr)
+library(tidyr)
+library(dplyr)
+library(tidyverse)
+library(scales)
+library(lubridate)
+library(corrplot)
+#loading data
+data <- read.csv("waterQuality1.csv")
+
+datan <- (data[, unlist(lapply(data, is.numeric))])
+#subseting the first 5 coloumns for analyze
+datan <- data.frame(al = datan$aluminium,as = datan$arsenic,ba =datan$barium,ca = datan$cadmium,ch = datan$chloramine)
+m = cor(datan)
+corrplot(m)
+#ploting the varibles
+plot(datan$as,datan$ba)
+#regression
+reg <- lm(ba~as,data = datan)
+summary(reg)
+abline(reg)
